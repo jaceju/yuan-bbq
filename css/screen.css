@@ -153,7 +153,10 @@ body .wrapper > footer a:visited {
   color: #333333;
 }
 #info > section.info-block > div.content a:visited {
-  color: #333333;
+  color: #666666;
+}
+#info > section.info-block > div.content a:hover {
+  color: black;
 }
 #info > section.info-block.about > h1 {
   background-position: 0 0;
