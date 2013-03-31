@@ -5,38 +5,110 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import compass/reset
+@import common
 
 body
-  color: #fff
-  background: #930
+    margin: 0
+    padding 0
+    margin-top: 10px
+    background: #333
 
-#logo
-  text-indent: 100%
-  white-space: nowrap
-  overflow: hidden
-  width: 600px
-  height: 400px
-  background: url(../img/logo.png)
-  margin: 0 auto
+    .wrapper
+        background: #eee url(../img/bg.jpg)
 
-#nav
-  overflow: hidden
-  width: 800px
-  margin: 0 auto
+        & > header
+            position: relative
+            width: 800px
+            height: 30px
+            margin: 0 auto
 
-  li
-    float: left
+            & > .logo
+                +hidden_text
+                position: relative
+                width: 250px
+                height: 130px
+                top: 0
+                left: 0
+                background: url(../img/logo.png) no-repeat
 
-    a
-      display: block
-      width: 200px
-      height: 100px
-      line-height: 100px
-      text-align: center
-      text-shadow: #333 3px 3px 3px
-      font:
-        size: 2.5em
+            & > .slogan
+                +hidden_text
+                position: absolute
+                top: 20px
+                left: 280px
+                width: 500px
+                height: 60px
+                background: url(../img/slogan.png) no-repeat
 
-.time
-  height: 50px
-  text-align: center
+
+            & > .social
+                position: absolute
+                top: 90px
+                left: 300px
+
+        & > footer
+            width: 100%
+            height: 40px
+            padding-top: 20px
+            background: #333
+
+            & p
+                color: #fff
+                text-align: center
+
+            & a
+                color: #fff
+
+                &:visited
+                    color: #fff
+
+#main-body
+    width: 800px
+    margin: 100px auto 20px auto
+
+#slider
+    width: 800px
+    height: 531px
+    margin-bottom: 30px
+
+#info
+    overflow: hidden
+
+    & > section.info-block
+        float: left
+        width: 390px
+        margin-bottom: 30px
+        margin-right: 10px
+
+        & > h1
+            +hidden_text
+            height: 60px
+            margin-bottom: 10px
+            background: url(../img/info-title.png) no-repeat
+
+        & > div.content
+            color: #333
+            font-size: 20px
+            line-height: 150%
+
+            & a
+                color: #333
+
+                &:visited
+                    color: #333
+
+        &.about > h1
+            background-position: 0 0
+
+        &.booking > h1
+            background-position: 0 -60px
+
+        &.venue > h1
+            background-position: 0 -120px
+
+        &.time > h1
+            background-position: 0 -180px
+
+        &.venue iframe
+            border: 10px solid #333
+

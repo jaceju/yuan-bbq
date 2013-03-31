@@ -2,7 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,89 +23,150 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 9, ../sass/screen.sass */
 body {
-  color: white;
-  background: #993300;
+  margin: 0;
+  margin-top: 10px;
+  background: #333333;
 }
-
-/* line 13, ../sass/screen.sass */
-#logo {
+body .wrapper {
+  background: #eeeeee url(../img/bg.jpg);
+}
+body .wrapper > header {
+  position: relative;
+  width: 800px;
+  height: 30px;
+  margin: 0 auto;
+}
+body .wrapper > header > .logo {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 600px;
-  height: 400px;
-  background: url(../img/logo.png);
-  margin: 0 auto;
+  position: relative;
+  width: 250px;
+  height: 130px;
+  top: 0;
+  left: 0;
+  background: url(../img/logo.png) no-repeat;
 }
-
-/* line 22, ../sass/screen.sass */
-#nav {
+body .wrapper > header > .slogan {
+  text-indent: 100%;
+  white-space: nowrap;
   overflow: hidden;
-  width: 800px;
-  margin: 0 auto;
+  position: absolute;
+  top: 20px;
+  left: 280px;
+  width: 500px;
+  height: 60px;
+  background: url(../img/slogan.png) no-repeat;
 }
-/* line 27, ../sass/screen.sass */
-#nav li {
-  float: left;
+body .wrapper > header > .social {
+  position: absolute;
+  top: 90px;
+  left: 300px;
 }
-/* line 30, ../sass/screen.sass */
-#nav li a {
-  display: block;
-  width: 200px;
-  height: 100px;
-  line-height: 100px;
+body .wrapper > footer {
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  background: #333333;
+}
+body .wrapper > footer p {
+  color: white;
   text-align: center;
-  text-shadow: #333333 3px 3px 3px;
-  font-size: 2.5em;
+}
+body .wrapper > footer a {
+  color: white;
+}
+body .wrapper > footer a:visited {
+  color: white;
 }
 
-/* line 40, ../sass/screen.sass */
-.time {
-  height: 50px;
-  text-align: center;
+#main-body {
+  width: 800px;
+  margin: 100px auto 20px auto;
+}
+
+#slider {
+  width: 800px;
+  height: 531px;
+  margin-bottom: 30px;
+}
+
+#info {
+  overflow: hidden;
+}
+#info > section.info-block {
+  float: left;
+  width: 390px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+#info > section.info-block > h1 {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 60px;
+  margin-bottom: 10px;
+  background: url(../img/info-title.png) no-repeat;
+}
+#info > section.info-block > div.content {
+  color: #333333;
+  font-size: 20px;
+  line-height: 150%;
+}
+#info > section.info-block > div.content a {
+  color: #333333;
+}
+#info > section.info-block > div.content a:visited {
+  color: #333333;
+}
+#info > section.info-block.about > h1 {
+  background-position: 0 0;
+}
+#info > section.info-block.booking > h1 {
+  background-position: 0 -60px;
+}
+#info > section.info-block.venue > h1 {
+  background-position: 0 -120px;
+}
+#info > section.info-block.time > h1 {
+  background-position: 0 -180px;
+}
+#info > section.info-block.venue iframe {
+  border: 10px solid #333333;
 }
