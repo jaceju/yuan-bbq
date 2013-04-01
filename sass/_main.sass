@@ -1,0 +1,129 @@
+body
+    margin: 0
+    padding 0
+    margin-top: 10px
+    background: #333
+
+    .wrapper
+        background: #eee url(../img/bg.jpg)
+
+        & > header
+            position: relative
+            width: 800px
+            height: 30px
+            margin: 0 auto
+
+            & > .logo
+                +hidden_text
+                position: relative
+                width: 250px
+                height: 130px
+                top: 0
+                left: 0
+                background: url(../img/logo.png) no-repeat
+
+            & > .slogan
+                +hidden_text
+                position: absolute
+                top: 20px
+                left: 280px
+                width: 500px
+                height: 60px
+                background: url(../img/slogan.png) no-repeat
+
+            & > .social
+                position: absolute
+                top: 90px
+                left: 300px
+
+        & > footer
+            width: 100%
+            height: 40px
+            padding-top: 20px
+            background: #333
+
+            & p
+                color: #fff
+                text-align: center
+
+            & a
+                color: #fff
+
+                &:visited
+                    color: #fff
+
+#main-body
+    width: 800px
+    margin: 100px auto 20px auto
+
+#slider
+    position: relative
+    list-style: none
+    overflow: hidden
+    width: 100%
+    padding: 0
+    margin: 0
+
+    li
+        -webkit-backface-visibility: hidden
+        position: absolute
+        display: none
+        width: 100%
+        left: 0
+        top: 0
+
+    li:first-child
+        position: relative
+        display: block
+        float: left
+
+    img
+        display: block
+        height: auto
+        float: left
+        width: 100%
+        border: 0
+
+#info
+    overflow: hidden
+
+    & > section.info-block
+        float: left
+        width: 390px
+        margin-bottom: 30px
+        margin-right: 10px
+
+        & > h1
+            +hidden_text
+            height: 60px
+            margin-bottom: 10px
+            background: url(../img/info-title.png) no-repeat
+
+        & > div.content
+            color: #333
+            font-size: 20px
+            line-height: 150%
+
+            & a
+                color: #333
+
+                &:visited
+                    color: #666
+
+                &:hover
+                    color: #000
+
+        &.about > h1
+            background-position: 0 0
+
+        &.booking > h1
+            background-position: 0 -60px
+
+        &.venue > h1
+            background-position: 0 -120px
+
+        &.time > h1
+            background-position: 0 -180px
+
+        &.venue iframe
+            border: 10px solid #333
